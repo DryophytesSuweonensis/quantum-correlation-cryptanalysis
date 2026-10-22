@@ -1,0 +1,29 @@
+{
+    "experiment": "exp03_finite_shot_sampling",
+    "seed": 20261022,
+    "n_trials_per_shot_count": 5000,
+    "shot_counts": [
+        10,
+        20,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        5000
+    ],
+    "true_candidate": 36,
+    "true_candidate_hex": "24",
+    "true_probability": 0.045936604208908105,
+    "second_candidate": 41,
+    "second_candidate_hex": "29",
+    "second_probability": 0.026677641928267295,
+    "probability_gap": 0.01925896228064081,
+    "krp_definition": "Probability that the true key is selected as the measurement-histogram mode.",
+    "tie_handling": "tie_aware_krp assumes uniform random selection among candidates tied for maximum count.",
+    "shots_for_50pct_tie_aware_krp": 200,
+    "shots_for_90pct_tie_aware_krp": 1000,
+    "shots_for_95pct_tie_aware_krp": 1000,
+    "shots_for_99pct_tie_aware_krp": 2000
+}

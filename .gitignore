@@ -19,4 +19,4 @@ venv/
 
 # Large or regenerated outputs
 figures/
-results/
+# results/

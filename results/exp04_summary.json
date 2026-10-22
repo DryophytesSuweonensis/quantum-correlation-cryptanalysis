@@ -1,0 +1,30 @@
+{
+    "experiment": "exp04_qiskit_state_validation",
+    "shots": 100000,
+    "seed": 20261022,
+    "n_candidates": 256,
+    "n_qubits": 8,
+    "true_candidate": 36,
+    "true_candidate_hex": "24",
+    "true_theoretical_probability": 0.0459366042089076,
+    "true_measured_probability": 0.04638,
+    "true_measured_count": 4638,
+    "true_theoretical_rank": 1,
+    "true_measured_rank": 1,
+    "exact_state_fidelity": 1.0000000000000182,
+    "max_amplitude_error": 2.5903704978456752e-14,
+    "total_variation_distance": 0.016317322589666408,
+    "probability_rmse": 0.00021313541319095377,
+    "probability_fidelity": 0.9993254716590665,
+    "max_probability_error": 0.0010895273718798983,
+    "transpiled_depth": 496,
+    "transpiled_size": 510,
+    "transpiled_operation_counts": {
+        "cx": 247,
+        "u3": 128,
+        "u2": 97,
+        "u1": 30,
+        "measure": 8,
+        "barrier": 1
+    }
+}
