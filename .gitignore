@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+
+.ipynb_checkpoints/
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
+
+*.log
+
+# Conda / virtual environments
+.env
+.venv/
+venv/
+
+# Large or regenerated outputs
+figures/
+results/
