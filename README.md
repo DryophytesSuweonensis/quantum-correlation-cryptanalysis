@@ -1,0 +1,5 @@
+Linear cryptanalysis is a statistical attack that exploits weak linear relationships that remain within a nonlinear block cipher. The attacker collects a set of known plaintext/ciphertext pairs and evaluates multiple partial-key candidates by partially decrypting the final round. For each candidate, a predefined XOR-based linear relation involving plaintext bits and estimated internal-state bits is tested over many samples. The deviation of this relation from a random probability of \(0.5\) is measured using the bias
+\[
+\epsilon = P(\text{relation}=0)-0.5.
+\]
+Incorrect key candidates typically produce near-random behavior with \(\epsilon \approx 0\), whereas the correct candidate tends to preserve the underlying linear approximation of the cipher and therefore exhibits a larger \(|\epsilon|\). The candidate with the largest absolute bias is then selected as the most likely subkey.
