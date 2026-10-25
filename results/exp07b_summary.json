@@ -1,0 +1,43 @@
+{
+    "experiment": "exp07b_heldout_validation_marking",
+    "true_candidate": 36,
+    "true_candidate_hex": "24",
+    "initial_true_key_probability": 0.039699982929327846,
+    "heldout_pair_count": 1808,
+    "validation_sizes": [
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        1808
+    ],
+    "bias_thresholds": [
+        0.005,
+        0.01,
+        0.015,
+        0.02,
+        0.025,
+        0.03,
+        0.035,
+        0.04
+    ],
+    "marking_rule": "mark k if |validation_bias(k)| >= tau",
+    "validation_data_usage": "Held-out plaintext/ciphertext pairs not used for EXP05 correlation-state construction.",
+    "critical_limitation": "EXP07B evaluates the marking rule classically. The reversible quantum implementation and its oracle cost are not yet included.",
+    "best_selectivity_configuration": {
+        "validation_size": 1808,
+        "bias_threshold": 0.025,
+        "n_marked_candidates": 12,
+        "false_positive_count": 11,
+        "true_probability_given_marked": 0.43054048972389974
+    },
+    "best_true_probability_upper_bound_configuration": {
+        "validation_size": 1808,
+        "bias_threshold": 0.025,
+        "n_marked_candidates": 12,
+        "true_probability_upper_bound": 0.43054048972389974,
+        "ideal_true_probability_after_qaa": 0.4302446939846637
+    }
+}

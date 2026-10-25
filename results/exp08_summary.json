@@ -1,0 +1,69 @@
+{
+    "experiment": "exp08_marking_strategy_benchmark",
+    "true_candidate": 36,
+    "true_candidate_hex": "24",
+    "initial_true_key_probability": 0.039699982929327846,
+    "n_linear_approximations": 8,
+    "validation_sizes": [
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+    ],
+    "nominal_false_positive_rates": [
+        0.5,
+        0.25,
+        0.1,
+        0.05,
+        0.02,
+        0.01
+    ],
+    "trials_per_configuration": 200,
+    "methods": {
+        "M1_single": "Canonical single linear correlation magnitude.",
+        "M2_energy": "Sum of squared standardized correlations; chi-square-style.",
+        "M3_llr": "Sign-marginalized approximate log-likelihood ratio.",
+        "M4_consensus": "Number of approximations with |z| >= 2.0."
+    },
+    "overall_best_robust_configuration": {
+        "M1_single": {
+            "validation_size": 1024,
+            "nominal_false_positive_rate": 0.5,
+            "true_key_retention_probability": 0.94,
+            "mean_false_positive_count": 128.365,
+            "mean_true_probability_given_marked": 0.07766434062845066,
+            "effective_true_probability": 0.07300448019074363
+        },
+        "M2_energy": {
+            "validation_size": 1024,
+            "nominal_false_positive_rate": 0.01,
+            "true_key_retention_probability": 0.965,
+            "mean_false_positive_count": 4.725,
+            "mean_true_probability_given_marked": 0.6523845226798662,
+            "effective_true_probability": 0.629551064386071
+        },
+        "M3_llr": {
+            "validation_size": 1024,
+            "nominal_false_positive_rate": 0.01,
+            "true_key_retention_probability": 0.975,
+            "mean_false_positive_count": 4.425,
+            "mean_true_probability_given_marked": 0.6979681352928038,
+            "effective_true_probability": 0.6805189319104836
+        },
+        "M4_consensus": {
+            "validation_size": 1024,
+            "nominal_false_positive_rate": 0.25,
+            "true_key_retention_probability": 0.975,
+            "mean_false_positive_count": 19.635,
+            "mean_true_probability_given_marked": 0.33518600225234363,
+            "effective_true_probability": 0.32680635219603504
+        }
+    },
+    "important_limitations": [
+        "Additional approximations are selected using single-trail LAT beam search. Linear-hull effects and key-dependent trail interference are not fully modeled.",
+        "Chi-square and LLR threshold calibration use approximately independent Gaussian null components. The actual linear tests may be statistically correlated.",
+        "All verifier scores are still evaluated classically. Reversible quantum-oracle implementation cost is not included in EXP08."
+    ]
+}

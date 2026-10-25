@@ -1,0 +1,42 @@
+{
+    "experiment": "exp07c_marking_robustness",
+    "true_candidate": 36,
+    "true_candidate_hex": "24",
+    "initial_true_key_probability": 0.039699982929327846,
+    "heldout_pool_size": 1808,
+    "validation_sizes": [
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+    ],
+    "bias_thresholds": [
+        0.005,
+        0.01,
+        0.015,
+        0.02,
+        0.025,
+        0.03,
+        0.035,
+        0.04
+    ],
+    "random_trials_per_configuration": 500,
+    "marking_rule": "mark k if |validation_bias(k)| >= tau",
+    "main_metrics": [
+        "true_key_retention_probability",
+        "mean_false_positive_count",
+        "mean_true_probability_given_marked",
+        "effective_true_probability"
+    ],
+    "important_interpretation": "EXP07C measures whether the validation-based marking rule remains selective across random held-out subsets, rather than relying on one particular validation split.",
+    "best_configuration_with_retention_ge_90pct": {
+        "validation_size": 1024,
+        "bias_threshold": 0.01,
+        "true_key_retention_probability": 0.912,
+        "mean_false_positive_count": 129.118,
+        "mean_true_probability_given_marked": 0.07673266586553056,
+        "effective_true_probability": 0.06998019126936388
+    }
+}

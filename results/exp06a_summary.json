@@ -1,0 +1,42 @@
+{
+    "experiment": "exp06a_postselection_amplitude_amplification",
+    "initial_good_sector_probability": 0.00034916400909423817,
+    "initial_true_key_given_good_probability": 0.0396999829293274,
+    "initial_unconditional_true_key_probability": 1.3861805200576775e-05,
+    "theta_rad": 0.018687018359423227,
+    "continuous_optimal_iteration_estimate": 41.529078598373545,
+    "rounded_optimal_iteration_estimate": 42,
+    "numerical_best_iteration": 42,
+    "numerical_best_good_sector_probability": 0.9996902637558622,
+    "true_key_probability_at_best_iteration": 0.03968768640572254,
+    "conditional_true_key_probability_after_aa": 0.0396999829293274,
+    "key_distribution_changed_inside_good_sector": false,
+    "threshold_comparison": {
+        "50pct": {
+            "target_success_probability": 0.5,
+            "naive_repetitions": 1985,
+            "first_aa_iteration": 21,
+            "aa_success_probability": 0.5181396445056131
+        },
+        "90pct": {
+            "target_success_probability": 0.9,
+            "naive_repetitions": 6594,
+            "first_aa_iteration": 33,
+            "aa_success_probability": 0.9017835384078949
+        },
+        "95pct": {
+            "target_success_probability": 0.95,
+            "naive_repetitions": 8579,
+            "first_aa_iteration": 36,
+            "aa_success_probability": 0.9579026255196375
+        },
+        "99pct": {
+            "target_success_probability": 0.99,
+            "naive_repetitions": 13187,
+            "first_aa_iteration": 39,
+            "aa_success_probability": 0.9910921909512563
+        }
+    },
+    "important_interpretation": "Amplitude amplification increases the probability of reaching the correlation-state sector, but does not increase the relative probability of the correct key within that sector.",
+    "cost_warning": "The AA iteration count is not a physical gate count. Each iteration requires state preparation/inversion and reflections. Coherent data access and attack-oracle costs must be included in an end-to-end comparison."
+}

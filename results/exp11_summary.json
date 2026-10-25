@@ -1,0 +1,77 @@
+{
+    "experiment": "exp11_end_to_end_qaa",
+    "true_candidate": 36,
+    "true_candidate_hex": "24",
+    "initial_true_key_probability": 0.0396999829293274,
+    "methods": [
+        "M2_energy",
+        "M3_llr"
+    ],
+    "maximum_success": {
+        "M2_energy": {
+            "representative_initial_marked_mass": 0.04492432341850665,
+            "marking_oracle_te": 478834.0,
+            "retention_probability": 0.92,
+            "true_probability_given_marked": 0.8837079761778434,
+            "maximum_expected_true_probability": 0.8111209177290071,
+            "iteration_for_maximum_probability": 18
+        },
+        "M3_llr": {
+            "representative_initial_marked_mass": 0.041671168776759186,
+            "marking_oracle_te": 492710.0,
+            "retention_probability": 0.9,
+            "true_probability_given_marked": 0.9526966508188954,
+            "maximum_expected_true_probability": 0.8572087215190541,
+            "iteration_for_maximum_probability": 11
+        }
+    },
+    "state_prep_cost_sweep_relative_to_M3_oracle": [
+        0.0,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        5.0
+    ],
+    "break_even": [
+        {
+            "method": "M2_energy",
+            "break_even_state_prep_multiplier": 0.1835578469284383,
+            "break_even_state_prep_te": 90440.78676011083,
+            "marking_oracle_te": 478834.0,
+            "state_prep_over_method_oracle": 0.18887711975363242,
+            "cost_optimal_iterations": 2,
+            "expected_true_key_probability": 0.6241342937808019,
+            "qaa_expected_te_per_true_key": 2258972.063944489,
+            "direct_expected_te_per_true_key": 2278106.4395193956
+        },
+        {
+            "method": "M3_llr",
+            "break_even_state_prep_multiplier": 0.1864020787366921,
+            "break_even_state_prep_te": 91842.16821435557,
+            "marking_oracle_te": 492710.0,
+            "state_prep_over_method_oracle": 0.1864020787366921,
+            "cost_optimal_iterations": 2,
+            "expected_true_key_probability": 0.6285854432945753,
+            "qaa_expected_te_per_true_key": 2298272.82270481,
+            "direct_expected_te_per_true_key": 2313405.7356611453
+        }
+    ],
+    "important_interpretation": [
+        "EXP11 does not assign a fictitious exact gate cost to coherent correlation-state preparation. Instead that unknown cost is swept explicitly.",
+        "The outer QAA cost includes one initial A call and two A-family calls per Grover iteration, together with one EXP10 marking phase-oracle call per iteration.",
+        "EXP09 verifier-retention failures are treated conservatively as zero true-key success.",
+        "The marked-sector probability is estimated from P(true)/P(true|marked), using the representative EXP09 robust operating point.",
+        "Classical and quantum primitive-work counts are reported separately because Toffoli-equivalent logical cost is not directly comparable with a classical CPU operation count."
+    ],
+    "limitations": [
+        "The coherent correlation-state preparation unitary A has not yet been synthesized gate-by-gate.",
+        "qRAM or coherent external-memory access remains outside the EXP10/EXP11 cost model.",
+        "Surface-code overhead, routing, T-state factories, hardware noise, and physical runtime are not included.",
+        "EXP09 statistics are averaged over random validation subsets; EXP11 therefore represents a statistical end-to-end benchmark rather than one fixed compiled oracle instance."
+    ]
+}

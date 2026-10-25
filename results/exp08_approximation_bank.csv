@@ -1,0 +1,9 @@
+approximation_id,plaintext_mask,u4_mask,mask_nibble2,mask_nibble4,predicted_abs_correlation,source,plaintext_mask_hex,u4_mask_hex
+A0_canonical,2816,1285,5,5,0.0625,canonical,0x0B00,0x0505
+A1,41120,257,1,1,0.0625,LAT_beam_search,0xA0A0,0x0101
+A2,43520,514,2,2,0.0625,LAT_beam_search,0xAA00,0x0202
+A3,41120,1028,4,4,0.0625,LAT_beam_search,0xA0A0,0x0404
+A4,2560,1285,5,5,0.0625,LAT_beam_search,0x0A00,0x0505
+A5,40970,2056,8,8,0.0625,LAT_beam_search,0xA00A,0x0808
+A6,17,2313,9,9,0.059326171875,LAT_beam_search,0x0011,0x0909
+A7,10,1799,7,7,0.046875,LAT_beam_search,0x000A,0x0707

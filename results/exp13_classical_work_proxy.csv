@@ -1,0 +1,4 @@
+strategy,known_plaintext_ciphertext_pairs,key_candidates,candidate_sample_relation_evaluations,cost_unit,directly_comparable_to_TE,note
+EXP01 classical linear key ranking,10000,256,2560000.0,classical candidate-sample relation evaluations,False,This work unit is intentionally kept separate from quantum TE proxies.
+EXP13 M2_energy optimized quantum attack,9216,256,,coherent QROM/oracle work; see TE proxy separately,False,"Raw-transform calls=315, QROM calls=630, validation relation updates=32768."
+EXP13 M3_llr optimized quantum attack,9216,256,,coherent QROM/oracle work; see TE proxy separately,False,"Raw-transform calls=333, QROM calls=666, validation relation updates=32768."

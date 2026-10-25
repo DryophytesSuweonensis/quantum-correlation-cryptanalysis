@@ -1,0 +1,60 @@
+{
+    "experiment": "exp13_final_end_to_end_benchmark",
+    "true_candidate": 36,
+    "true_candidate_hex": "24",
+    "P_true_given_zero_walsh_sector": 0.0396999829293274,
+    "outer_good_predicate": "(data register == 0^13) AND verifier(key)",
+    "baseline_best_quantum_strategy": {
+        "strategy": "M3_llr_joint_QAA",
+        "method": "M3_llr",
+        "inner_aa_iterations": 18,
+        "outer_qaa_iterations": 4,
+        "sector_probability": 0.4065738818283305,
+        "true_key_probability_per_execution": 0.7298543249190573,
+        "TE_per_execution": 12912864.0,
+        "expected_TE_per_true_key": 17692385.396814726
+    },
+    "baseline_raw_postselection": {
+        "expected_TE_per_true_key": 2368234117.056966
+    },
+    "baseline_prepared_direct_sampling": {
+        "inner_aa_iterations": 31,
+        "sector_probability": 0.8529765664966602,
+        "expected_TE_per_true_key": 61130925.10464693
+    },
+    "best_QAA_over_prepared_direct_cost_ratio": 0.2894179233592168,
+    "best_QAA_over_raw_postselection_cost_ratio": 0.007470707929333133,
+    "fixed99_vs_joint_optimization": {
+        "M2_energy": {
+            "global_joint_optimum_te_per_true": 17890136.20028829,
+            "fixed_99_percent_te_per_true": 22449959.676697485,
+            "global_over_fixed99": 0.7968894580624933,
+            "cost_reduction_from_joint_optimization": 0.20311054193750666
+        },
+        "M3_llr": {
+            "global_joint_optimum_te_per_true": 17692385.396814726,
+            "fixed_99_percent_te_per_true": 22341843.87660083,
+            "global_over_fixed99": 0.7918945944897772,
+            "cost_reduction_from_joint_optimization": 0.20810540551022283
+        }
+    },
+    "classical_baseline": {
+        "known_PC_pairs": 10000,
+        "candidate_sample_relation_evaluations": 2560000,
+        "direct_TE_comparison_valid": false
+    },
+    "final_interpretation_rules": [
+        "The quantum strategies are compared in a common logical Toffoli-equivalent proxy inherited from EXP10 and EXP12.",
+        "The classical baseline is NOT converted into the same TE unit. Therefore EXP13 does not claim a classical-versus-quantum runtime speedup.",
+        "Inner sector amplification and outer key-marking amplitude amplification are jointly optimized.",
+        "The outer good predicate explicitly includes data=0^13, so residual non-zero-Walsh amplitude cannot be incorrectly counted as useful key signal.",
+        "If the joint optimum uses substantially fewer than 39 inner-AA iterations, then near-perfect correlation sector preparation is not globally cost-optimal.",
+        "The dominant resource should be identified from the state-preparation versus marking-oracle cost breakdown."
+    ],
+    "limitations": [
+        "QROM and reversible-arithmetic costs remain analytical logical resource models rather than fault-tolerant hardware syntheses.",
+        "No surface-code, routing, magic-state factory, clock rate, or hardware error model is included.",
+        "EXP09 marking retention and conditional marked-state probabilities are statistical averages over validation subsets.",
+        "The classical and quantum resource units remain different, preventing a defensible absolute speedup claim."
+    ]
+}

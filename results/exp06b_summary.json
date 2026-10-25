@@ -1,0 +1,48 @@
+{
+    "experiment": "exp06b_end_to_end_key_recovery",
+    "seed": 20261023,
+    "n_trials": 5000,
+    "true_candidate": 36,
+    "true_candidate_hex": "24",
+    "true_key_probability_given_correlation_sector": 0.039699982929327846,
+    "naive_correlation_sector_probability": 0.00034916400909423817,
+    "aa_correlation_sector_probability": 0.9996902637558622,
+    "aa_iterations_per_attempt": 42,
+    "prep_family_calls_per_aa_attempt": 85,
+    "krp_thresholds": {
+        "50pct": {
+            "required_usable_samples": 500,
+            "tie_aware_krp": 0.7498066666666671,
+            "expected_naive_full_attempts": 1431991.80607716,
+            "expected_aa_full_attempts": 500.1549161052015,
+            "expected_total_aa_iterations": 21006.506476418464,
+            "expected_total_aa_prep_family_calls": 42513.167868942124
+        },
+        "90pct": {
+            "required_usable_samples": 1000,
+            "tie_aware_krp": 0.9087666666666668,
+            "expected_naive_full_attempts": 2863983.61215432,
+            "expected_aa_full_attempts": 1000.309832210403,
+            "expected_total_aa_iterations": 42013.01295283693,
+            "expected_total_aa_prep_family_calls": 85026.33573788425
+        },
+        "95pct": {
+            "required_usable_samples": 2000,
+            "tie_aware_krp": 0.9797,
+            "expected_naive_full_attempts": 5727967.22430864,
+            "expected_aa_full_attempts": 2000.619664420806,
+            "expected_total_aa_iterations": 84026.02590567386,
+            "expected_total_aa_prep_family_calls": 170052.6714757685
+        },
+        "99pct": {
+            "required_usable_samples": 5000,
+            "tie_aware_krp": 0.9998,
+            "expected_naive_full_attempts": 14319918.0607716,
+            "expected_aa_full_attempts": 5001.549161052015,
+            "expected_total_aa_iterations": 210065.06476418462,
+            "expected_total_aa_prep_family_calls": 425131.6786894213
+        }
+    },
+    "important_interpretation": "Amplitude amplification changes the cost of preparing usable correlation-state samples, but does not change the conditional key distribution. Therefore, KRP as a function of usable samples is the same key-extraction problem as before amplification.",
+    "cost_warning": "The reported preparation-family calls and AA iterations are logical cost proxies, not physical gate counts. Reversible data access, attack-oracle implementation, reflections, ancilla management, and verification costs are not yet included."
+}

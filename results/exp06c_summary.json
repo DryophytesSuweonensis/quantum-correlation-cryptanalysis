@@ -1,0 +1,21 @@
+{
+    "experiment": "exp06c_cost_optimal_amplitude_amplification",
+    "initial_good_sector_probability": 0.00034916400909423817,
+    "theta_rad": 0.018687018359423227,
+    "max_iterations_tested": 80,
+    "cost_metric": "expected preparation-family calls per usable sample",
+    "cost_formula": "(1 + 2t) / P_good(t)",
+    "cost_optimal_iteration": 31,
+    "cost_optimal_good_sector_probability": 0.8529765664966602,
+    "cost_optimal_expected_prep_calls_per_usable_sample": 73.85900442582285,
+    "cost_optimal_expected_aa_iterations_per_usable_sample": 36.3433196381033,
+    "no_aa_expected_prep_calls_per_usable_sample": 2863.9836121543194,
+    "max_success_iteration": 42,
+    "max_success_probability": 0.9996902637558622,
+    "max_success_probability_recomputed": 0.9996902637558622,
+    "max_success_expected_prep_calls_per_usable_sample": 85.02633573788425,
+    "cost_reduction_vs_no_aa": 38.77636361901736,
+    "cost_reduction_vs_max_success_aa": 1.151197966976076,
+    "important_interpretation": "The amplitude-amplification iteration count that maximizes success probability is not necessarily the iteration count that minimizes expected cost per usable correlation-state sample.",
+    "cost_warning": "The metric uses a logical preparation-family-call proxy (1 + 2t). It is not a physical gate count. Reversible data access, reflections, oracle depth, ancilla overhead, and hardware noise are not included."
+}

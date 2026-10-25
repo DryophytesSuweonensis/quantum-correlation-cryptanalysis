@@ -20,3 +20,5 @@ venv/
 # Large or regenerated outputs
 # figures/
 # results/
+notebooks/
+papers/

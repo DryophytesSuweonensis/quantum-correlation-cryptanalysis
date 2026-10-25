@@ -1,0 +1,48 @@
+{
+    "experiment": "exp07a_ideal_key_marking_qaa",
+    "true_candidate": 36,
+    "true_candidate_hex": "24",
+    "initial_true_key_probability": 0.039699982929327846,
+    "second_candidate": 41,
+    "second_candidate_hex": "29",
+    "second_candidate_probability": 0.026672925913281197,
+    "initial_true_to_second_probability_ratio": 1.4884000000000042,
+    "theta_rad": 0.20059103081889762,
+    "continuous_optimal_iteration_estimate": 3.4154201471078744,
+    "rounded_optimal_iteration_estimate": 3,
+    "best_probability_iteration": 19,
+    "best_probability": 0.9990435515989351,
+    "cost_optimal_iteration": 2,
+    "cost_optimal_true_key_probability": 0.7107568824703319,
+    "cost_optimal_expected_key_state_family_calls": 7.034754250457375,
+    "direct_sampling_expected_samples_per_true_hit": 25.18892770760521,
+    "ideal_qaa_logical_reduction_factor": 3.5806407460456082,
+    "thresholds": {
+        "50pct": {
+            "first_iteration": 2,
+            "success_probability": 0.7107568824703319,
+            "key_state_family_calls_per_attempt": 5,
+            "expected_key_state_family_calls_per_true_hit": 7.034754250457375
+        },
+        "90pct": {
+            "first_iteration": 3,
+            "success_probability": 0.9724809452570012,
+            "key_state_family_calls_per_attempt": 7,
+            "expected_key_state_family_calls_per_true_hit": 7.198084480873899
+        },
+        "95pct": {
+            "first_iteration": 3,
+            "success_probability": 0.9724809452570012,
+            "key_state_family_calls_per_attempt": 7,
+            "expected_key_state_family_calls_per_true_hit": 7.198084480873899
+        },
+        "99pct": {
+            "first_iteration": 11,
+            "success_probability": 0.9902712088448137,
+            "key_state_family_calls_per_attempt": 23,
+            "expected_key_state_family_calls_per_true_hit": 23.225960519270586
+        }
+    },
+    "critical_assumption": "The QAA oracle directly marks the true key. This requires prior knowledge of the correct key and therefore does not constitute a realizable cryptanalytic attack. EXP07A is only an idealized extraction upper bound.",
+    "important_cost_warning": "The key-state-family call metric is a logical proxy. It assumes access to a unitary correlation-state preparation operator and its inverse. It must not be directly multiplied by the expected postselection cost from EXP06C, because a coherent outer QAA requires a fully unitary preparation routine rather than a measurement/postselection procedure."
+}

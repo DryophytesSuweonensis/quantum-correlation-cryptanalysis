@@ -1,0 +1,4 @@
+strategy,known_pc_pairs,key_candidates,candidate_sample_evaluations,relation_updates,note
+Classical EXP01 linear attack,10000,256,2560000,2560000,Classical candidate loop; not measured in Toffoli-equivalent units.
+Quantum M2_energy one marking-oracle call,9216,256,1024,8192,Candidate keys processed coherently in superposition; reversible gate overhead is reported separately by EXP10.
+Quantum M3_llr one marking-oracle call,9216,256,1024,8192,Candidate keys processed coherently in superposition; reversible gate overhead is reported separately by EXP10.

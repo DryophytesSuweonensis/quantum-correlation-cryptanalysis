@@ -1,0 +1,4 @@
+scenario,qrom_entries,qrom_output_bits,qrom_calls,qrom_te,qrom_cnot_proxy,sbox_calls,sbox_te,relation_cnot_proxy,hadamard_count,raw_transform_te,raw_transform_cnot_proxy,logical_qubits_proxy
+optimistic,8192,11,2,16382,90290,4,64,14,34,16446,90304,54
+baseline,8192,11,2,32764,90290,4,64,14,34,32828,90304,54
+pessimistic,8192,11,2,65528,90290,4,64,14,34,65592,90304,54

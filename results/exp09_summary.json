@@ -1,0 +1,184 @@
+{
+    "experiment": "exp09_empirical_calibration",
+    "true_candidate": 36,
+    "true_candidate_hex": "24",
+    "initial_true_key_probability": 0.039699982929327846,
+    "n_approximations": 8,
+    "fresh_calibration_pairs": 8192,
+    "calibration_trials": 240,
+    "evaluation_trials": 200,
+    "validation_sizes": [
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+    ],
+    "nominal_false_positive_rates": [
+        0.5,
+        0.25,
+        0.1,
+        0.05,
+        0.02,
+        0.01
+    ],
+    "robust_retention_requirement": 0.9,
+    "methods": {
+        "M1_single": "Single canonical linear correlation.",
+        "M2_energy": "Naive sum of squared standardized linear correlations.",
+        "M3_llr": "EXP08 sign-marginalized approximate log-likelihood ratio with empirical null threshold calibration.",
+        "M4_consensus": "Count of individually significant linear correlations.",
+        "M5_mahalanobis": "Covariance-aware quadratic score using empirically estimated wrong-key mean and covariance."
+    },
+    "null_diagnostics": {
+        "32": {
+            "condition_number": 1.1593402695868564,
+            "effective_rank": 7.986664834242038,
+            "max_abs_offdiagonal_correlation": 0.01346188989249312,
+            "eigenvalues": [
+                0.9345716296131025,
+                0.9780611180665807,
+                0.9841607160146159,
+                0.9901345595688507,
+                1.0177739675626134,
+                1.023292455256012,
+                1.0270849626491594,
+                1.0834865250238817
+            ]
+        },
+        "64": {
+            "condition_number": 1.184997057973887,
+            "effective_rank": 7.974763746796528,
+            "max_abs_offdiagonal_correlation": 0.009967520615265651,
+            "eigenvalues": [
+                0.978312851268169,
+                0.9919378964101823,
+                1.0019914840655144,
+                1.006414889898148,
+                1.0129660576276278,
+                1.0181723878058733,
+                1.0971267414233996,
+                1.1592978505308245
+            ]
+        },
+        "128": {
+            "condition_number": 1.190878390377927,
+            "effective_rank": 7.978331294965481,
+            "max_abs_offdiagonal_correlation": 0.015321769427545075,
+            "eigenvalues": [
+                0.9834014085072764,
+                1.0052185536708695,
+                1.0107807392526722,
+                1.019618236758323,
+                1.0303158013053888,
+                1.0527754146609576,
+                1.062058037266556,
+                1.1711114864585312
+            ]
+        },
+        "256": {
+            "condition_number": 1.3615591584079487,
+            "effective_rank": 7.936787346632235,
+            "max_abs_offdiagonal_correlation": 0.030794200261559764,
+            "eigenvalues": [
+                0.9567936661672991,
+                1.0141381299305117,
+                1.0342828882061434,
+                1.0451622140960952,
+                1.054632254181283,
+                1.0814615158147618,
+                1.1070322407172954,
+                1.3027311788768043
+            ]
+        },
+        "512": {
+            "condition_number": 1.6061581801296163,
+            "effective_rank": 7.813860301849136,
+            "max_abs_offdiagonal_correlation": 0.06006420124654874,
+            "eigenvalues": [
+                0.9988271225140833,
+                1.0384646398687498,
+                1.0623392211091918,
+                1.0751396395855082,
+                1.1405889094915338,
+                1.1986302893869751,
+                1.2145767463493073,
+                1.604274353361322
+            ]
+        },
+        "1024": {
+            "condition_number": 2.0497374180745713,
+            "effective_rank": 7.5037600042515145,
+            "max_abs_offdiagonal_correlation": 0.08460277466833112,
+            "eigenvalues": [
+                1.0419183900013014,
+                1.0769996629886027,
+                1.0962447492237473,
+                1.150023141805806,
+                1.2441593620032023,
+                1.3811711375837774,
+                1.5534214082303395,
+                2.1356591105656824
+            ]
+        }
+    },
+    "overall_best_robust_configuration": {
+        "M1_single": {
+            "validation_size": 1024,
+            "nominal_false_positive_rate": 0.5,
+            "calibration_achieved_fpr": 0.4655228758169935,
+            "true_key_retention_probability": 0.92,
+            "mean_false_positive_count": 109.945,
+            "mean_true_probability_given_marked": 0.08810629598921564,
+            "effective_true_probability": 0.08105779231007838
+        },
+        "M2_energy": {
+            "validation_size": 1024,
+            "nominal_false_positive_rate": 0.02,
+            "calibration_achieved_fpr": 0.02,
+            "true_key_retention_probability": 0.92,
+            "mean_false_positive_count": 1.35,
+            "mean_true_probability_given_marked": 0.8837079761778434,
+            "effective_true_probability": 0.8130113380836158
+        },
+        "M3_llr": {
+            "validation_size": 1024,
+            "nominal_false_positive_rate": 0.01,
+            "calibration_achieved_fpr": 0.01,
+            "true_key_retention_probability": 0.9,
+            "mean_false_positive_count": 0.63,
+            "mean_true_probability_given_marked": 0.9526966508188954,
+            "effective_true_probability": 0.8574269857370059
+        },
+        "M4_consensus": {
+            "validation_size": 1024,
+            "nominal_false_positive_rate": 0.5,
+            "calibration_achieved_fpr": 0.15290849673202614,
+            "true_key_retention_probability": 0.98,
+            "mean_false_positive_count": 20.26,
+            "mean_true_probability_given_marked": 0.3188106777035354,
+            "effective_true_probability": 0.3124344641494647
+        },
+        "M5_mahalanobis": {
+            "validation_size": 1024,
+            "nominal_false_positive_rate": 0.02,
+            "calibration_achieved_fpr": 0.02,
+            "true_key_retention_probability": 0.92,
+            "mean_false_positive_count": 1.995,
+            "mean_true_probability_given_marked": 0.8374499947831598,
+            "effective_true_probability": 0.7704539952005071
+        }
+    },
+    "interpretation_rules": {
+        "if_M2_and_M5_are_similar": "Cross-correlation among approximations is probably not the primary reason for EXP08 performance.",
+        "if_M5_substantially_outperforms_M2": "Approximation covariance matters and the independence-style energy score double-counts redundant information.",
+        "if_M3_remains_strong_after_empirical_calibration": "The EXP08 LLR improvement is not merely an artifact of theoretical Gaussian threshold calibration.",
+        "if_M3_collapses": "The EXP08 LLR result was likely sensitive to its assumed null distribution or model mismatch."
+    },
+    "limitations": [
+        "Wrong-key null fitting excludes the known true key. This is appropriate for benchmark diagnosis but is not itself an attack-side oracle.",
+        "M5 Mahalanobis is a statistical verifier score, not yet a reversible quantum circuit.",
+        "Quantum gate, ancilla, arithmetic, and uncomputation costs are intentionally deferred to the next experiment."
+    ]
+}

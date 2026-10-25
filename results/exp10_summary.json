@@ -1,0 +1,100 @@
+{
+    "experiment": "exp10_oracle_cost_benchmark",
+    "cost_model": "Logical reversible-operation proxy. Values are not synthesized physical Toffoli/T counts.",
+    "important_assumptions": [
+        "Validation plaintext/ciphertext pairs are compiled into the circuit as classical constants. qRAM or coherent external-memory access cost is not included.",
+        "Two inverse 4-bit S-box evaluations are shared across all linear approximations for each sample.",
+        "The complete marking phase oracle includes compute and uncompute, so forward arithmetic cost is doubled.",
+        "M3 LLR uses a symmetry-aware fixed-point qROM lookup instead of reversible transcendental function evaluation.",
+        "M5 uses a direct symmetric fixed-point quadratic form for its covariance-aware statistic."
+    ],
+    "cost_scenarios": {
+        "optimistic": {
+            "sbox_lookup_te": 8,
+            "qrom_entry_te": 1
+        },
+        "baseline": {
+            "sbox_lookup_te": 16,
+            "qrom_entry_te": 2
+        },
+        "pessimistic": {
+            "sbox_lookup_te": 32,
+            "qrom_entry_te": 4
+        }
+    },
+    "fixed_point_bits": 16,
+    "baseline_results": [
+        {
+            "method": "M1_single",
+            "validation_size": 1024,
+            "effective_true_probability": 0.0810577923100783,
+            "mean_false_positive_count": 109.945,
+            "phase_oracle_te_proxy": 174164,
+            "phase_oracle_cnot_proxy": 16386,
+            "logical_qubits_proxy": 31,
+            "quality_per_million_te": 0.46541071811670776,
+            "cost_relative_to_cheapest": 1.0,
+            "cost_relative_to_M2": 0.36372521583680356
+        },
+        {
+            "method": "M4_consensus",
+            "validation_size": 1024,
+            "effective_true_probability": 0.3124344641494647,
+            "mean_false_positive_count": 20.26,
+            "phase_oracle_te_proxy": 475934,
+            "phase_oracle_cnot_proxy": 106512,
+            "logical_qubits_proxy": 119,
+            "quality_per_million_te": 0.656465947273077,
+            "cost_relative_to_cheapest": 2.7326772467329645,
+            "cost_relative_to_M2": 0.9939436213802696
+        },
+        {
+            "method": "M2_energy",
+            "validation_size": 1024,
+            "effective_true_probability": 0.8130113380836158,
+            "mean_false_positive_count": 1.35,
+            "phase_oracle_te_proxy": 478834,
+            "phase_oracle_cnot_proxy": 106496,
+            "logical_qubits_proxy": 172,
+            "quality_per_million_te": 1.6978980984717371,
+            "cost_relative_to_cheapest": 2.7493282193794353,
+            "cost_relative_to_M2": 1.0
+        },
+        {
+            "method": "M3_llr",
+            "validation_size": 1024,
+            "effective_true_probability": 0.8574269857370059,
+            "mean_false_positive_count": 0.63,
+            "phase_oracle_te_proxy": 492710,
+            "phase_oracle_cnot_proxy": 106496,
+            "logical_qubits_proxy": 157,
+            "quality_per_million_te": 1.7402264734570152,
+            "cost_relative_to_cheapest": 2.829000252635447,
+            "cost_relative_to_M2": 1.0289787274921998
+        },
+        {
+            "method": "M5_mahalanobis",
+            "validation_size": 1024,
+            "effective_true_probability": 0.7704539952005071,
+            "mean_false_positive_count": 1.995,
+            "phase_oracle_te_proxy": 520550,
+            "phase_oracle_cnot_proxy": 106496,
+            "logical_qubits_proxy": 275,
+            "quality_per_million_te": 1.4800768325818983,
+            "cost_relative_to_cheapest": 2.98884959004157,
+            "cost_relative_to_M2": 1.087119962241612
+        }
+    ],
+    "automatic_findings": [
+        {
+            "comparison": "M3_llr_vs_M2_energy",
+            "M3_minus_M2_effective_probability": 0.04441564765339012,
+            "M3_over_M2_oracle_cost": 1.0289787274921998
+        }
+    ],
+    "next_step_rule": {
+        "if_M3_cost_close_to_M2": "M3 remains the preferred verifier because its EXP09 selectivity improvement is obtained without a large oracle-cost penalty.",
+        "if_M3_much_more_expensive": "M2 becomes the practical candidate because its EXP09 marking quality is close to M3 with a simpler score circuit.",
+        "if_relation_stage_dominates": "Future optimization should focus on shared partial-decryption and counter accumulation rather than score arithmetic."
+    }
+}

@@ -1,0 +1,3 @@
+method,break_even_state_prep_multiplier,break_even_state_prep_te,marking_oracle_te,state_prep_over_method_oracle,cost_optimal_iterations,expected_true_key_probability,qaa_expected_te_per_true_key,direct_expected_te_per_true_key
+M2_energy,0.1835578469284383,90440.78676011083,478834.0,0.18887711975363242,2,0.6241342937808019,2258972.063944489,2278106.4395193956
+M3_llr,0.1864020787366921,91842.16821435557,492710.0,0.1864020787366921,2,0.6285854432945753,2298272.82270481,2313405.7356611453

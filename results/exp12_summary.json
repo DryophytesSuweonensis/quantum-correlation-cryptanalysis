@@ -1,0 +1,156 @@
+{
+    "experiment": "exp12_correlation_state_preparation_cost",
+    "true_candidate": 36,
+    "true_candidate_hex": "24",
+    "reconstructed_exp05": {
+        "initial_zero_walsh_sector_probability": 0.0003491640090942383,
+        "true_probability_given_zero_sector": 0.039699982929327415,
+        "true_candidate_correlation": -0.0595703125
+    },
+    "coherent_data_access": {
+        "entries": 8192,
+        "index_qubits": 13,
+        "output_bits": 11,
+        "stored_information": "P5, P7, P8, ciphertext nibble 2, ciphertext nibble 4",
+        "total_one_bits": 45145,
+        "average_one_bits_per_entry": 5.5108642578125
+    },
+    "baseline_raw_transform": {
+        "TE_proxy": 32828,
+        "CNOT_proxy": 90304,
+        "Hadamards": 34,
+        "logical_qubits_proxy": 54
+    },
+    "baseline_sector_preparation_points": {
+        "cost_optimal": {
+            "inner_aa_iterations": 31,
+            "zero_sector_probability": 0.8529765664966602,
+            "state_prep_te": 2070086.0,
+            "expected_te_per_good_sector_measurement": 2426896.6831084746
+        },
+        "max_success": {
+            "inner_aa_iterations": 42,
+            "zero_sector_probability": 0.9996902637558622,
+            "state_prep_te": 2792984.0,
+            "expected_te_per_good_sector_measurement": 2793849.35640634
+        },
+        "Pgood_0.900": {
+            "inner_aa_iterations": 33,
+            "zero_sector_probability": 0.9017835384078949,
+            "state_prep_te": 2201522.0,
+            "expected_te_per_good_sector_measurement": 2441297.6132684816
+        },
+        "Pgood_0.950": {
+            "inner_aa_iterations": 36,
+            "zero_sector_probability": 0.9579026255196375,
+            "state_prep_te": 2398676.0,
+            "expected_te_per_good_sector_measurement": 2504091.6854140367
+        },
+        "Pgood_0.990": {
+            "inner_aa_iterations": 39,
+            "zero_sector_probability": 0.9910921909512563,
+            "state_prep_te": 2595830.0,
+            "expected_te_per_good_sector_measurement": 2619160.985930589
+        },
+        "Pgood_0.999": {
+            "inner_aa_iterations": 41,
+            "zero_sector_probability": 0.9996090476749221,
+            "state_prep_te": 2727266.0,
+            "expected_te_per_good_sector_measurement": 2728332.6479923185
+        }
+    },
+    "default_correlation_state_target": 0.99,
+    "exp11_placement": [
+        {
+            "scenario": "optimistic",
+            "state_prep_target": 0.99,
+            "inner_aa_iterations": 39,
+            "achieved_zero_sector_probability": 0.9910921909512563,
+            "state_prep_te": 1301652.0,
+            "M3_oracle_te": 492710.0,
+            "state_prep_over_M3_oracle": 2.6418217612794543,
+            "outer_method": "M2_energy",
+            "EXP11_break_even_te": 90440.78676011084,
+            "state_prep_over_break_even": 14.392311772481143,
+            "above_EXP11_break_even": true
+        },
+        {
+            "scenario": "optimistic",
+            "state_prep_target": 0.99,
+            "inner_aa_iterations": 39,
+            "achieved_zero_sector_probability": 0.9910921909512563,
+            "state_prep_te": 1301652.0,
+            "M3_oracle_te": 492710.0,
+            "state_prep_over_M3_oracle": 2.6418217612794543,
+            "outer_method": "M3_llr",
+            "EXP11_break_even_te": 91842.16821435557,
+            "state_prep_over_break_even": 14.172705471869977,
+            "above_EXP11_break_even": true
+        },
+        {
+            "scenario": "baseline",
+            "state_prep_target": 0.99,
+            "inner_aa_iterations": 39,
+            "achieved_zero_sector_probability": 0.9910921909512563,
+            "state_prep_te": 2595830.0,
+            "M3_oracle_te": 492710.0,
+            "state_prep_over_M3_oracle": 5.268474356112114,
+            "outer_method": "M2_energy",
+            "EXP11_break_even_te": 90440.78676011084,
+            "state_prep_over_break_even": 28.701983839274803,
+            "above_EXP11_break_even": true
+        },
+        {
+            "scenario": "baseline",
+            "state_prep_target": 0.99,
+            "inner_aa_iterations": 39,
+            "achieved_zero_sector_probability": 0.9910921909512563,
+            "state_prep_te": 2595830.0,
+            "M3_oracle_te": 492710.0,
+            "state_prep_over_M3_oracle": 5.268474356112114,
+            "outer_method": "M3_llr",
+            "EXP11_break_even_te": 91842.16821435557,
+            "state_prep_over_break_even": 28.264032202957658,
+            "above_EXP11_break_even": true
+        },
+        {
+            "scenario": "pessimistic",
+            "state_prep_target": 0.99,
+            "inner_aa_iterations": 39,
+            "achieved_zero_sector_probability": 0.9910921909512563,
+            "state_prep_te": 5184186.0,
+            "M3_oracle_te": 492710.0,
+            "state_prep_over_M3_oracle": 10.521779545777434,
+            "outer_method": "M2_energy",
+            "EXP11_break_even_te": 90440.78676011084,
+            "state_prep_over_break_even": 57.32132797286212,
+            "above_EXP11_break_even": true
+        },
+        {
+            "scenario": "pessimistic",
+            "state_prep_target": 0.99,
+            "inner_aa_iterations": 39,
+            "achieved_zero_sector_probability": 0.9910921909512563,
+            "state_prep_te": 5184186.0,
+            "M3_oracle_te": 492710.0,
+            "state_prep_over_M3_oracle": 10.521779545777434,
+            "outer_method": "M3_llr",
+            "EXP11_break_even_te": 91842.16821435557,
+            "state_prep_over_break_even": 56.446685665133025,
+            "above_EXP11_break_even": true
+        }
+    ],
+    "important_interpretation": [
+        "The raw coherent transform is not the same as the normalized EXP05 correlation state. The desired correlation amplitudes reside in the data-register zero-Walsh sector.",
+        "A coherent outer-QAA preparation unitary therefore requires either sector amplitude amplification or a joint outer oracle that explicitly includes the data-register zero condition.",
+        "EXP12 models the nested approach: first amplify the zero-Walsh sector, then use the resulting unitary as the state-preparation family A.",
+        "The QROM cost is scenario-dependent because no gate-level hardware-specific QROM synthesis has been fixed.",
+        "QROM stores only the eleven classical bits actually needed by the canonical linear relation rather than full plaintext and ciphertext blocks."
+    ],
+    "limitations": [
+        "TE values are logical Toffoli-equivalent resource proxies, not physical fault-tolerant runtimes.",
+        "QROM, inverse S-box, and multi-controlled-reflection costs are analytical resource models rather than transpiled hardware circuits.",
+        "The near-deterministic sector preparation still contains residual non-zero-Walsh amplitude whenever Pgood < 1.",
+        "EXP13 should model the outer good predicate as (data register = 0) AND verifier(key), avoiding any assumption that residual non-zero-Walsh amplitude has the desired key distribution."
+    ]
+}
